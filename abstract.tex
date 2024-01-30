@@ -1,15 +1,18 @@
-% !TEX root = ../my-thesis.tex
-%
-\IfLanguageName{english}{\pdfbookmark[0]{Abstract}{Abstract}}{\pdfbookmark[0]{Zusammenfassung}{Zusammenfassung}}
-\IfLanguageName{english}{\addchap*{Abstract}}{\addchap*{Zusammenfassung}}
-\label{sec:abstract}
+\documentclass{article}
 
+% Uncomment the following line to allow the usage of graphics (.jpg, .png, etc.)
+\usepackage[pdftex]{graphicx}
+% Uncomment the following line to allow the usage of umlauts
+\usepackage[utf8]{inputenc}
+% Set page borders
+\usepackage[a4paper,vmargin={40mm,20mm},hmargin={40mm,30mm}]{geometry}
 
-\IfLanguageName{english}{
-\vspace*{20mm}
+% Start the document
+\begin{document}
 
-{\usekomafont{chapter}Abstract (german)}
-\label{sec:abstract-diff}
+\begin{center}
+ \section*{Simulation und Modellierung}
+ Ausgearbeitet von Daniel Kuster und Jullius Nde Cho
+\end{center}
 
-}
-{}
+\end{document}
