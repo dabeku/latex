@@ -1,0 +1,13 @@
+\chapter*{Zusammenfassung}
+
+Diese Diplomarbeit zeigt die Machbarkeit und Implementierung eines Einbruchs-erkennungssystems f\"ur WLANs (WIDS), welches ein neurales Netzwerk (ANN) zur Erkennung von verschiedenen Attacken verwendet.
+
+Nach der theoretischen Einf\"uhrung in die Themen WLAN und neurale Netzwerke, werden einige, im Internet frei verf\"ugbare Programme, die zum Mith\"oren von Netzwerkpaketen, zum Brechen der WEP Verschl\"usselung und zur Einbruchs-erkennung verwendet werden,  vorgestellt. Im letzten Teil werden Details, des zu implementierenden WIDS, beschrieben und Verbesserungsvorschl\"age diskutiert.
+
+Das WIDS besteht aus vier Teilen:
+
+Die erste Komponente, genannt {\em data gatherer}, holt sich Netzwerkpakete entweder aus einer Datei oder direkt von der Netzwerkkarte. Die zweite Komponente, {\em data processor}, enth\"alt das neurale Netzwerk, welches f\"ur das Lernen der Charakteristika von verschiedenen Attacken verantwortlich ist und einen Pr\"aprozessor, der sich um die Initialisierung des WIDS k\"ummert. Der dritte Teil, {\em data storage}, k\"ummert sich um die Speicherung der Eigenschaften des neuralen Netzwerks. Der vierte Teil, {\em data response}, informiert den Netzwerkadministrator \"uber stattfindende Attacken.
+
+Die Evaluierung des WIDS beginnt mit der Suche nach den besten Parametern f\"ur das eingesetzte neurale Netzwerk. Anschlie"send wird das WIDS mit Hilfe von Dateien, die mitgeschnittene Netzwerkpakete enthalten, getestet.
+
+Die resultierenden Ergebnisse zeigen, dass der Einsatz eines neuralen Netzwerks einiges an Potential bietet. Es ist nun m\"oglich, auf Ver\"anderungen der Netzwerkcharakteristika, wie zum Beispiel der durchschnittlichen Anzahl der angemeldeten Benutzer in einem WLAN, zu reagieren. Das WIDS erkennt alle Angriffe, die im Laufe der Tests angewendet wurden.

@@ -1,0 +1,90 @@
+\documentclass[11pt, a4paper, oneside, titlepage, headsepline]{book}
+
+\usepackage{a4}
+\usepackage{epsf}	% to import eps pictures
+\usepackage{graphicx}	% Import graphics and figures
+\usepackage{amsmath}	% Mathematical expressions
+\usepackage{url}		% Urls are used
+\usepackage{packages/apalike/apalike}	% To use the apalike bibliography style
+\usepackage{glosstex}
+\usepackage{setspace}	% set line spacing
+\usepackage[german,english]{babel}
+
+\usepackage[automark]{scrpage2}
+\usepackage{blindtext}
+\clearscrheadings
+\rohead{\rightmark}
+\lehead[]{}
+\ofoot[]{}
+\cfoot[\pagemark]{\pagemark}
+\pagestyle{scrheadings}
+
+
+\onehalfspacing
+
+\setlength{\parindent}{0em}		% do not indent at the beginning of a paragraph
+\setlength{\parskip}{11pt}		% Set distance between two paragraphs
+
+% Begin the document
+\begin{document}
+
+% Set english as language
+\selectlanguage{english}
+
+% Document information
+\author{Daniel Kuster}
+\title{Infiltrating wireless networks and intrusion detection - A hybrid approach using neural networks}
+\date{2006}
+
+% Display roman page numbers
+\frontmatter
+
+% Create the first page
+\input{Cover}
+
+\cfoot[\pagemark]{\pagemark}
+
+% Create the rest of the document
+
+% Set english as language
+\selectlanguage{german}
+
+\input{EidesstattlicheErklaerung}
+\input{Danksagung}
+\input{Zusammenfassung}
+
+% Set english as language
+\selectlanguage{english}
+
+\input{Summary}
+
+% Create the TOC
+\begin{spacing}{0.89}
+\tableofcontents
+\end{spacing}
+
+% Display arabic page numbers
+\mainmatter
+
+% Create the content
+\input{Fundamentals}
+\input{Analysis}
+\input{Implementation}
+
+% Create an Appendix
+\input{Appendix}
+
+% Create a list of figures
+\listoffigures
+% Create a list of tables
+\listoftables
+% Create a glossary
+\printglosstex(acr)
+
+% Set bibliography style
+\bibliographystyle{apalike}
+% Create a bibliography
+\bibliography{Bibliography}
+
+\end{document}
+
