@@ -3,11 +3,5 @@ zzz
 @Override
     public void onSaveInstanceState(@NonNull Bundle savedInstanceState) {
         // Always call the superclass so it can save the view hierarchy state
-        super.onSaveInstanceState(savedInstanceState);
-        logger.info("[onSaveInstanceState] Save the state");
-        // Save the previous orientation to the saved instance state
-        savedInstanceState.putInt(KEY_PREVIOUS_ORIENTATION, previousOrientation);
-        // This call is important so that recent state of project is saved in database in EditorActivity.
-        // Attention: This muss be called before onSaveInstanceState of activity.
-        cumulateData();
+
     }
