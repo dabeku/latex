@@ -18,17 +18,17 @@ By using a self learning system it is possible to react to changes in the networ
 The underlying study is divided into two parts:
 
 \begin{description}
-    \item[1. Fundamentals:] Explains the required theoretical background to understand this work. First, an introduction of wireless networks using the \ac{IEEE} 802.11 standard and its frame format is given. The next part discusses the process of scanning and infiltrating wireless networks. Additionally, possible ways to characterise intrusion detection systems are shown. Finally, neural networks are explained in detail to understand the implementation part of this work.
+    \item[1. Fundamentals:] Explains the required theoretical background to understand this work. First, an introduction of wireless networks using the IEEE 802.11 standard and its frame format is given. The next part discusses the process of scanning and infiltrating wireless networks. Additionally, possible ways to characterise intrusion detection systems are shown. Finally, neural networks are explained in detail to understand the implementation part of this work.
 	\item[2. Analysis and Implementation:] Presents an overview of freely available wireless tools used for network scanning, like Kismet and Netstumbler. A short introduction to Aircrack and WepLab, which are programs to break WEP keys, is given. Finally, intrusion detection systems, like AirSnare and WIDZ, are discussed. The implementation part of this study shows design and implementation details of a hybrid wireless intrusion detection system containing a neural network. The obtained results of the system are shown and interpreted. This work ends with a discussion on how future work could look like.
 \end{description}
 
-\chapter{\ac{WLAN}}
+\chapter{WLAN}
 
 \section{Definition}
 
 WLAN is the abbreviation of {\bf W}ireless {\bf L}ocal {\bf A}rea {\bf N}etwork and describes a network in which the communication between participants takes place over a wireless medium like radio frequency or infrared.
 
-According to \cite[p.1-3]{80211wireless}, when focusing on the user of a wireless network there exist some advantages and new possibilities over wired networks. First and most important, since wireless means {\em no cables} users can move around with their laptop or \ac{PDA} in the range of an access point while staying connected to a network and without worrying about plugging wires.
+According to \cite[p.1-3]{80211wireless}, when focusing on the user of a wireless network there exist some advantages and new possibilities over wired networks. First and most important, since wireless means {\em no cables} users can move around with their laptop or PDA in the range of an access point while staying connected to a network and without worrying about plugging wires.
 
 An advantage for the operator of a wireless network is that no cables have to be laid. This point is especially important for buildings that are under historical preservation protection or where wiring is very expensive. Another example is a company building that is split up into two locations by a road. In this case running cables can be a critical and expensive issue.
 
@@ -97,7 +97,7 @@ The 802.11 standard defines only the two lowest layers of the ISO/OSI seven laye
 
 \section{Types and Architectures}
 
-As with the possibility to create networks without using any cables and the fast development of wireless networks there exists the need to create networks that serve specific purposes like setting up a wireless network quickly or serving a lot of users. In general, there exist two major types of networks, {\em independent \ac{BSS}} and {\em infrastructure BSS}, whereas the latter has several subtypes which are described briefly.
+As with the possibility to create networks without using any cables and the fast development of wireless networks there exists the need to create networks that serve specific purposes like setting up a wireless network quickly or serving a lot of users. In general, there exist two major types of networks, {\em independent BSS} and {\em infrastructure BSS}, whereas the latter has several subtypes which are described briefly.
 
 \subsubsection{Independent BSS (IBSS)}
 
@@ -125,7 +125,7 @@ The difference between an IBSS and an infrastructure BSS is that the latter uses
 		network in order to be able to send and receive data to and from the network. 
 		The access point can accept or deny the association attempt of a station 
 		based on parameters that can be set in the access point. For example 
-		most access points have ACLs which are used to block certain \ac{MAC address}es
+		most access points have ACLs which are used to block certain MAC addresses
 \end{itemize}
 
 \begin{figure}[htbp]
@@ -139,11 +139,11 @@ The difference between an IBSS and an infrastructure BSS is that the latter uses
 
 \subsubsection{Extended Service Set}
 
-As the covered area in a simple infrastructure BSS is limited by the power of one single access point an extended service area can cover larger areas by using a lot of access points that are linked together. By giving every single access point the same \ac{SSID} huge wireless networks can be created. A distributed system is responsible for delivering the data from one access point to another. This network topology offers the possibility for stations to move around and change the associated access point while staying connected. The wireless card takes care of connecting to the access point with the highest signal strength.\footnote{The access point with the highest signal strength is normally the nearest one}
+As the covered area in a simple infrastructure BSS is limited by the power of one single access point an extended service area can cover larger areas by using a lot of access points that are linked together. By giving every single access point the same SSID huge wireless networks can be created. A distributed system is responsible for delivering the data from one access point to another. This network topology offers the possibility for stations to move around and change the associated access point while staying connected. The wireless card takes care of connecting to the access point with the highest signal strength.\footnote{The access point with the highest signal strength is normally the nearest one}
 
 \subsubsection{Multi-BSS or "Virtual Access Points"}
 
-Some access points offer the possibility to create two or more BSS, each with 	different privileges. For example in a company there would exist a network with the name "company" that would be used by the people working in the company. Additionally, there would exist another network with the name "guest" which could be used by the people that do not work in the company. Both networks would be managed by the same access point. The network with the name "company" could be secured using \ac{WEP} or \ac{WPA} and could grant access to privileged users only. The network "guest" would offer access to every person who has a WLAN card but the access to the network should be more restricted. As a consequence the access point would handle the requests coming from a certain station differently. It would either forward to the internal company network or would give only access to the guest network \cite[p.19]{80211wireless}.
+Some access points offer the possibility to create two or more BSS, each with 	different privileges. For example in a company there would exist a network with the name "company" that would be used by the people working in the company. Additionally, there would exist another network with the name "guest" which could be used by the people that do not work in the company. Both networks would be managed by the same access point. The network with the name "company" could be secured using WEP or WPA and could grant access to privileged users only. The network "guest" would offer access to every person who has a WLAN card but the access to the network should be more restricted. As a consequence the access point would handle the requests coming from a certain station differently. It would either forward to the internal company network or would give only access to the guest network \cite[p.19]{80211wireless}.
 \pagebreak
 \section{Specification of WLAN Frames}
 
@@ -234,7 +234,7 @@ This field contains the payload of a frame.
 
 \subsubsection{Frame Check Sequence}
 
-A station can check the received frame for its correctness. The check is done by using a \ac{CRC}. All fields of the frame are included in the check. The CRC is done before a frame is sent from the sending station and before it is processed by the receiving station. %The receiver compares the value in the FCS field with the result of its own CRC.
+A station can check the received frame for its correctness. The check is done by using a CRC. All fields of the frame are included in the check. The CRC is done before a frame is sent from the sending station and before it is processed by the receiving station. %The receiver compares the value in the FCS field with the result of its own CRC.
 
 \section{Hidden Node Problem}
 \label{sec:hidden_node_problem}
@@ -303,7 +303,7 @@ In order to be able to infiltrate a wireless network it is necessary to gather i
 		one or more DHCP server in the network, a cracker simply broadcasts a
 		DHCP discover request to the network and receives all information that is
 		required. Although it is easier for the network administrator to
-		set up a DHCP server than assigning static \ac{IP} addresses it is critical
+		set up a DHCP server than assigning static IP addresses it is critical
 		to use DHCP because the person who infiltrates the network
 		probably knows about the simplicity of using the DHCP service.
 	\item[IP information:]
@@ -316,7 +316,7 @@ In order to be able to infiltrate a wireless network it is necessary to gather i
 		configuring the access point to accept only association attempts from devices with MAC 
 		addresses that are known it is impossible for an 
 		intruder to enter a wireless network in case the MAC address of the 
-		\ac{NIC} owned by the intruder is not spoofed. MAC addresses can be read 
+		NIC owned by the intruder is not spoofed. MAC addresses can be read 
 		out of every single packet that is sent over the network.
 	\item[Encryption:]
 		Most access points still use WEP encryption. After the 
@@ -377,7 +377,7 @@ The standard equipment of a wardriver typically consists of a laptop and a wirel
 
 Depending on the way networks are scanned there exist different types of operating systems and chipsets of wireless NICs which have different capabilities.
 
-For a normal scan of a wireless network it is sufficient to use any wireless NIC and Windows as the operating system. There is no need for special software because Windows has a built in wireless network scanner. Besides, there exist powerful scanning software for this \ac{OS}.
+For a normal scan of a wireless network it is sufficient to use any wireless NIC and Windows as the operating system. There is no need for special software because Windows has a built in wireless network scanner. Besides, there exist powerful scanning software for this OS.
 
 A lot of wireless network scanners are available for Linux and monitor mode is supported for a large range of chipsets.\footnote{See \url{http://www.linux-wlan.org/docs/wlan_adapters.html.gz} for a complete list with all vendors and chipsets of different wireless NICs.} Common chipsets include Prism, Orinoco and Aironet because the usage of their monitor mode is easy and a lot of tools written in Linux can set and unset the monitor mode automatically.
 
@@ -406,7 +406,7 @@ On the other hand the operators of wireless networks are addressed. It is to the
 \section{Definition}
 \label{sec:wids_definition}
 
-An {\em intrusion detection system} (\ac{IDS}) is a piece of software that knows how to detect intrusion attempts and unusual behaviour in a network. It possibly performs counter actions on a specific user who infiltrates the network. For a more detailed definition see also \cite{idsdef}.
+An {\em intrusion detection system} (IDS) is a piece of software that knows how to detect intrusion attempts and unusual behaviour in a network. It possibly performs counter actions on a specific user who infiltrates the network. For a more detailed definition see also \cite{idsdef}.
 
 The underlying study discusses only {\em network based systems} and ignores {\em host based systems} since they are not relevant for this work.
 
@@ -447,7 +447,7 @@ Different IDS provide the user with a varying amount of features. Despite the bi
 According to \cite{wids_schreiber} an IDS is an interesting goal for a cracker. As a consequence the IDS itself has to be protected from the following threats:
 
 \begin{description}
-    \item[\ac{DoS} attack:] Since the IDS scans and stores packets that are relevant for the detection of an attack a cracker could send out large amounts of these packets to bring the IDS down. A counter measure to this threat is to use a buffer which overflows when it is full. The data processing component takes the data from this buffer instead from the data gathering component directly. The drawback of the buffer is that at the time the buffer is full the system can not respond to attacks that are currently running
+    \item[DoS attack:] Since the IDS scans and stores packets that are relevant for the detection of an attack a cracker could send out large amounts of these packets to bring the IDS down. A counter measure to this threat is to use a buffer which overflows when it is full. The data processing component takes the data from this buffer instead from the data gathering component directly. The drawback of the buffer is that at the time the buffer is full the system can not respond to attacks that are currently running
     \item[Direct attack:] Since programs (especially those written in C/C++ 
 where pointers are used) are vulnerable to buffer overflow attacks the IDS can be brought down by such an attack. The difference to the DoS attack described above is that the direct attack tries to exploit the weaknesses in the code of the program. The DoS attack tries to harm the system based on its function, namely intrusion detection
 	\item[Communication channel attack:] This attack deals with disturbing the communication between the IDS and its infrastructure. An example is a cracker who manages it to bring down the mail server which sends out alerts and warnings to the network administrator
@@ -460,7 +460,7 @@ where pointers are used) are vulnerable to buffer overflow attacks the IDS can b
 
 \section{Introduction}
 
-This section gives an overview of neural networks. First, the difference between biological and artificial neural networks (\ac{ANN}) is explained. Next, artificial neural networks are explained in more detail by showing different learning methods. Additionally, some learning algorithms are shown like the principles of {\em delta rule learning} and {\em backpropagation learning}.
+This section gives an overview of neural networks. First, the difference between biological and artificial neural networks (ANN) is explained. Next, artificial neural networks are explained in more detail by showing different learning methods. Additionally, some learning algorithms are shown like the principles of {\em delta rule learning} and {\em backpropagation learning}.
 
 \section{Definition}
 

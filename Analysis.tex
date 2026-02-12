@@ -134,11 +134,11 @@ The main features of Netstumbler include:
 \begin{itemize}
 	\addtolength{\itemsep}{-1.5ex}
 
-	\item \ac{GUI} based
+	\item GUI based
 	\item Graphical presentation of the signal strength and noise values
 	\item Filtering of different types of wireless networks
     \item Active scanning\footnote{See section \ref{sec:active_passive_scanning} for details}
-	\item \ac{GPS} support
+	\item GPS support
 	\item Support for Aironet, Hermes and Prism based NICs
 	\item Save networks found in binary and proprietary NS1 file (Network Stumbler file)
 	\item Export to readable text file
@@ -173,7 +173,7 @@ On the right side detailed information about a network is shown. See also \cite{
 	\item[Vendor:] Netstumbler identifies vendors of networking technology by comparing the first three octets of the MAC address of an access point with a predefined database that contains vendors.\footnote{A list including the mapping between MAC address and vendor name can be found at: http://standards.ieee.org/regauth/oui/oui.txt}
 	\item[Type:] Describes the type of the network. A possible value can either be {\em AP} (infrastructure BSS) or {\em Peer} (IBSS)
 	\item[Encryption:] Shows whether a network is WEP protected or not
-	\item[Signal to Noise Ratio (\ac{SNR}):] This value indicates the offset between the signal strength and the noise. The higher the difference the better it is for the quality of the connection \cite{snr}
+	\item[Signal to Noise Ratio (SNR):] This value indicates the offset between the signal strength and the noise. The higher the difference the better it is for the quality of the connection \cite{snr}
 	\item[SNR+:] The best SNR value of an AP found during a scan
 	\item[Signal:] The current signal strength of an AP
 	\item[Signal+:] The highest signal strength found during a scan
@@ -205,7 +205,7 @@ The main features of Kismet are (see also \cite{kismet_readme} and \cite{guide_t
 	\item It supports "any wireless card which
     supports raw monitoring (rfmon) mode, and can sniff 802.11b, 802.11a, and
     802.11g traffic." \cite{kismet_readme}
-	\item Automatically logs access points to \ac{XML}, \ac{CSV} and GPS files
+	\item Automatically logs access points to XML, CSV and GPS files
 	\item Automatically logs raw data to pcap files
 	\item Network IP range detection
 	\item Detection of default access point configurations
@@ -273,7 +273,7 @@ Probably one of the most famous WEP cracking tool for Windows and Linux is AirSn
 	\label{airsnort}
 \end{figure}
 
-As figure \ref{airsnort} shows it is GUI based and offers several configuration options. To break a WEP key it is either possible to scan the network in real time (a cracking attempt is done each time ten weak IVs are captured) or load a \ac{pcap file} with WEP encrypted packets. Additional options include the cracking breadth for 64 and 128 bit keys. The higher the breadth rate the more time it takes to break a WEP key but the higher the probability to find the correct one. A result in the {\em PW: Hex} and {\em PW: ASCII} column does not mean that the correct key was found. The documentation of AirSnort states that it uses a probabilistic approach which means that it tries to guess the correct key.
+As figure \ref{airsnort} shows it is GUI based and offers several configuration options. To break a WEP key it is either possible to scan the network in real time (a cracking attempt is done each time ten weak IVs are captured) or load a pcap file with WEP encrypted packets. Additional options include the cracking breadth for 64 and 128 bit keys. The higher the breadth rate the more time it takes to break a WEP key but the higher the probability to find the correct one. A result in the {\em PW: Hex} and {\em PW: ASCII} column does not mean that the correct key was found. The documentation of AirSnort states that it uses a probabilistic approach which means that it tries to guess the correct key.
 
 As it is shown in \cite[p.61f]{wlan_sicherheit} AirSnort requires at least five million encrypted packets to break a WEP key. Depending on the captured data and the amount of weak IVs this value can also exceed the ten million mark.
 
@@ -434,12 +434,12 @@ Kismet can also be used as a distributed WIDS. It manages drones which send thei
 
 In 2003 Mark Osborne designed and implemented a tool named WIDZ. He says that the tool is only a {\em proof of concept} to show insecurities in wireless networks. \cite{widz_design} It runs solely under Linux.
 
-WIDZ detects basic attacks like \ac{rogue AP}s, active scanners and flood attacks. It is possible to create white and black lists of MAC addresses and a white list for SSIDs. Additionally, a user can create alert scripts that are run whenever WIDZ triggers an alarm.
+WIDZ detects basic attacks like rogue APs, active scanners and flood attacks. It is possible to create white and black lists of MAC addresses and a white list for SSIDs. Additionally, a user can create alert scripts that are run whenever WIDZ triggers an alarm.
 
 According to \cite[p.3f]{widz_design} WIDZ is divided into two different modules:
 
 \begin{description}
-    \item[AP monitor:] This module is capable of identifying \ac{bogus AP}s\footnote{See glossary} and \ac{unauthorised AP}s\footnote{See glossary}. Both types of attacks are identified by comparing simple text files that contain MAC addresses with the MAC addresses found
+    \item[AP monitor:] This module is capable of identifying bogus APs\footnote{See glossary} and unauthorised APs\footnote{See glossary}. Both types of attacks are identified by comparing simple text files that contain MAC addresses with the MAC addresses found
 \pagebreak
 	\item[Traffic monitor:] Since not all threats can be detected by managing text files this module deals with identifying other type of attacks. The most severe attacks that can be recognised by WIDZ are {\em probe monitoring}\footnote{Probe monitoring means detecting active scanners by searching for probe requests where the SSID is not set} and {\em flood detection}
 
